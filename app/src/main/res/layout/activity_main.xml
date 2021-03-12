@@ -12,8 +12,8 @@
         android:id="@+id/tlHome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constaintStart_toStartOF="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
@@ -26,6 +26,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcRestaurantes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
