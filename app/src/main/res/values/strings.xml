@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DesafioAndroid</string>
+    <string name="nome_do_restautante">Nome do Restautante</string>
+    <string name="endereco">Endereco</string>
+    <string name="horario">Horario</string>
+    <string name="principais_pratos">Principais Pratos</string>
+    <string name="nome_do_prato">Nome do prato</string>
+</resources>
