@@ -1,3 +1,6 @@
 package br.com.digitalhouse.desafioandroid.ui
 
-class Restaurante (val imagem: Int, var local: String, var endereco: String, val horario: String)
+import java.io.Serializable
+
+
+data class Restaurante (val imagem: Int, val local: String, val endereco: String, val horario: String):Serializable

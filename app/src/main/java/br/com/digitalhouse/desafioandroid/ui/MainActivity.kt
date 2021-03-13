@@ -8,22 +8,20 @@ import br.com.digitalhouse.desafioandroid.R
 import br.com.digitalhouse.desafioandroid.adapter.RestauranteAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
+const val RESTAURANTE = "restaurante"
+
 class MainActivity : AppCompatActivity(), RestauranteAdapter.OnRestauranteClickListener {
 
     private val listaDeRestaurantes = getListaDeRestaurantes()
-    private val restauranteAdapter = RestauranteAdapter(listaDeRestaurantes, this)
+    private val restauranteAdapter by lazy { RestauranteAdapter(listaDeRestaurantes, this) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        rcRestaurantes.apply {
-            setHasFixedSize(true)
-            layoutManager = LinearLayoutManager(context)
-            adapter = restauranteAdapter
-        }
+        rcRestaurantes.adapter = restauranteAdapter
     }
 
-    fun getListaDeRestaurantes():ArrayList<Restaurante> {
+    fun getListaDeRestaurantes(): List<Restaurante> {
 
         val restauranteUm = Restaurante(
             R.mipmap.image_one,
@@ -49,15 +47,12 @@ class MainActivity : AppCompatActivity(), RestauranteAdapter.OnRestauranteClickL
             "Alameda Jauaperi, 626 - Moema",
             "Fecha às 01:00"
         )
-
-        val lista =
-            arrayListOf(restauranteUm,restauranteDois,restauranteTres,restauranteQuatro)
-        return lista
+        return listOf(restauranteUm, restauranteDois, restauranteTres, restauranteQuatro)
     }
 
     override fun onRestauranteClick(position: Int) {
-        Intent(this,RestauranteActivity::class.java).apply {
-//            val putExtra = putExtra("restaurante",listaDeRestaurantes[position])
+        Intent(this, RestauranteActivity::class.java).apply {
+            putExtra(RESTAURANTE, listaDeRestaurantes[position])
             startActivity(this)
         }
     }

@@ -1,20 +1,17 @@
 package br.com.digitalhouse.desafioandroid.adapter
 
-import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewParent
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.digitalhouse.desafioandroid.R
 import br.com.digitalhouse.desafioandroid.ui.Restaurante
-import kotlinx.android.synthetic.main.card_restaurante.view.*
 
 class RestauranteAdapter (
     private val listaEntrada: List<Restaurante>,
-    private val RestauranteClickListener: OnRestauranteClickListener
+    private val restauranteClickListener: OnRestauranteClickListener
     ): RecyclerView.Adapter<RestauranteAdapter.RestauranteViewHolder>(){
 
     override fun onCreateViewHolder(
@@ -22,14 +19,14 @@ class RestauranteAdapter (
         viewType: Int
     ): RestauranteViewHolder {
         val itemView =
-            LayoutInflater.from(parent.context).inflate(R.layout.card_restaurante, parent,false)
+            LayoutInflater.from(parent.context).inflate(R.layout.item_restaurante, parent,false)
         return RestauranteViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: RestauranteViewHolder, position: Int) {
         val currentItem = listaEntrada[position]
         holder.ivRestaurante.setOnClickListener{
-            RestauranteClickListener.onRestauranteClick(position)
+            restauranteClickListener.onRestauranteClick(position)
         }
         holder.ivRestaurante.setImageResource(currentItem.imagem)
         holder.tvNomeRestaurante.text =currentItem.local
