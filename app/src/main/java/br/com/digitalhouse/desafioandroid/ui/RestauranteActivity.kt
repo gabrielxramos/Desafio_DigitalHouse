@@ -25,11 +25,14 @@ class RestauranteActivity : AppCompatActivity(),PratoAdapter.OnPratoClickListenn
             logoRestaurante.setImageDrawable(getDrawable(img))
         }
 
-
         rvPratos.adapter = pratoAdapter
 
         voltarParaRestaurantes.setOnClickListener {
-            Intent()
+            onNavigateUp()
+            Intent(this, MainActivity::class.java).apply {
+                putExtra("main", restaurante)
+                startActivity(this)
+            }
         }
     }
 

@@ -13,5 +13,6 @@
     <color name="hint_card">#C0CCDA</color>
     <color name="card_prato">#5A6978</color>
     <color name="background_restaurante">#FDFDFD</color>
+    <color name="hint_color">#8492A6</color>
 
 </resources>
