@@ -47,15 +47,51 @@ class RestauranteActivity : AppCompatActivity(),PratoAdapter.OnPratoClickListenn
     private fun getListaPrato(): ArrayList<Prato>{
         val prato = Prato(
             R.mipmap.image_four,
-            "Salada com Molho Gengibre",
+            "Waffle com Ovo",
             "Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Paisis, filhis, espiritis santis. Viva Forevis aptent taciti sociosqu ad litora torquent. Mé faiz elementum girarzis, nisi eros vermeio."
         )
 
         val pratoDois = Prato(
             R.mipmap.image_one,
-            "Salada com Molho",
+            "Porção de Camarão",
             "Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Paisis, filhis, espiritis santis. Viva Forevis aptent taciti sociosqu ad litora torquent. Mé faiz elementum girarzis, nisi eros vermeio."
         )
-        return arrayListOf(prato, pratoDois, prato, prato, prato, prato, prato, prato)
+
+        val pratoTres = Prato(
+            R.mipmap.image_three,
+            "Hamburguer",
+            "Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Paisis, filhis, espiritis santis. Viva Forevis aptent taciti sociosqu ad litora torquent. Mé faiz elementum girarzis, nisi eros vermeio."
+        )
+
+        val pratoQuatro = Prato(
+            R.mipmap.imagem_vegano,
+            "Ovo Vegano",
+            "Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Paisis, filhis, espiritis santis. Viva Forevis aptent taciti sociosqu ad litora torquent. Mé faiz elementum girarzis, nisi eros vermeio."
+        )
+
+        val pratoCinco = Prato(
+            R.mipmap.panquequinha_da_vovo,
+            "Panquequinha da Vovó",
+            "Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Paisis, filhis, espiritis santis. Viva Forevis aptent taciti sociosqu ad litora torquent. Mé faiz elementum girarzis, nisi eros vermeio."
+        )
+
+        val pratoSeis = Prato(
+            R.mipmap.image_uou,
+            "Mignon ao Molho",
+            "Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Paisis, filhis, espiritis santis. Viva Forevis aptent taciti sociosqu ad litora torquent. Mé faiz elementum girarzis, nisi eros vermeio."
+        )
+
+        val pratoSete = Prato(
+            R.mipmap.imagem_camarao,
+            "Bobó de Camarão",
+            "Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Paisis, filhis, espiritis santis. Viva Forevis aptent taciti sociosqu ad litora torquent. Mé faiz elementum girarzis, nisi eros vermeio."
+        )
+
+        val pratoOito = Prato(
+            R.mipmap.imagem_medalhao,
+            "Vaca Atolada",
+            "Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Paisis, filhis, espiritis santis. Viva Forevis aptent taciti sociosqu ad litora torquent. Mé faiz elementum girarzis, nisi eros vermeio."
+        )
+        return arrayListOf(prato, pratoDois, pratoTres, pratoQuatro, pratoCinco, pratoSeis, pratoSete, pratoOito)
     }
 }

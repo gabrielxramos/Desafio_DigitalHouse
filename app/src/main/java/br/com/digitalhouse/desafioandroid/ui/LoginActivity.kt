@@ -14,6 +14,9 @@ class LoginActivity : AppCompatActivity() {
         btnEntrar.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }
+        btnCadastrar.setOnClickListener {
+            startActivity(Intent(this,CadastroActvity::class.java))
+        }
 
 
     }

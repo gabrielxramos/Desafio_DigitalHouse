@@ -14,5 +14,6 @@
     <color name="card_prato">#5A6978</color>
     <color name="background_restaurante">#FDFDFD</color>
     <color name="hint_color">#8492A6</color>
+    <color name="desc_prato">#FF000000</color>
 
 </resources>
